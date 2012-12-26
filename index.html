@@ -4,7 +4,7 @@
   <title>spin.js</title>
   <meta name="description" content="An animated CSS activity indicator with VML fallback.">
   <meta name="viewport" content="width=1024, maximum-scale=1">
-  <meta property="og:image" content="http://fgnass.github.com/spin.js/assets/preview.jpg?v=1" />
+  <meta property="og:image" content="http://evereq.github.com/spin.js/assets/preview.jpg?v=1" />
   <link rel="shortcut icon" href="favicon.ico">
   <link href="assets/main.css?v=5" type="text/css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Amaranth:400,700' rel='stylesheet' type='text/css'>
@@ -24,13 +24,15 @@
   -->
 </div>
 
-<a id="ribbon" href="http://github.com/fgnass/spin.js"></a>
+<a id="ribbon" href="http://github.com/evereq/spin.js"></a>
 
 <div id="content">
 
 <div id="download">
   <a href="dist/spin.js" class="button">spin.js</a>
-  <a href="dist/spin.min.js" class="button">spin.min.js</a>
+  <a href="dist/spin.min.js" class="button">spin.min.js</a><br />  
+  <a href="dist/jquery.spin.js" class="button">jquery.spin.js</a>
+  <a href="dist/jquery.spin.d.ts" class="button">jquery.spin.d.ts</a>
 </div>
 
 <div id="example">
@@ -117,27 +119,9 @@ target.appendChild(spinner.el);
 </p>
 <h3 id="jquery">jQuery plugin</h3>
 <p>
-  Spin.js does not require jQuery. Anyway, if you use jQuery (or zepto.js) you may use the following plugin:
-</p>
-<pre class="prettyprint">
-$.fn.spin = function(opts) {
-  this.each(function() {
-    var $this = $(this),
-        data = $this.data();
-
-    if (data.spinner) {
-      data.spinner.stop();
-      delete data.spinner;
-    }
-    if (opts !== false) {
-      data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
-    }
-  });
-  return this;
-};
-</pre>
-<p>
-  Alternatively you may use this <a href="https://gist.github.com/1290439">advanced version</a> written by Bradley Smith.
+  Spin.js does not require jQuery. 
+  Anyway, if you use jQuery (or zepto.js) you may use the plugin (<a href="https://gist.github.com/1290439">originally written by Bradley Smith</a>) available for download 
+  together with TypeScript declaration file.
 </p>
 <h2>Supported browsers</h2>
 <img src="assets/browsers.png">
